@@ -32,7 +32,6 @@ class Song
   def self.new_by_filename(filename)
     name = filename.split(" - ")[1]
     song = self.new(name)
-    self.artist_name = filename.split(" - ")[2]
     song
   end
 
@@ -50,6 +49,7 @@ class Song
 
   def self.find_by_name(name)
     @@all[name] if name = @@all.find_index { |s| s.name == name }
+    artist_name = filename.split(" - ")[2]
   end
 
   def self.find_or_create_by_name(name)
