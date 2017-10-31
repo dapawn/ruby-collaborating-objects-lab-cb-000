@@ -61,8 +61,8 @@ class Song
     info = file.split(" - ")
   #  info = file.match(/(.*) - (.*)\.mp3/)
   binding.pry
-    s = new_by_name(info[0])
-    s.artist_name = info[1]
+    s = new_by_name(info[1])
+    s.artist_name = info[0]
     #binding.pry
     s
   end
