@@ -68,6 +68,7 @@ class Song
 
   def self.create_from_filename(file)
     info = file.match(/(.*) - (.*)\.mp3/)
+    binding.pry
     s = create_by_name(info[2])
     s.artist_name = info[1]
     #binding.pry
