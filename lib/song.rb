@@ -8,7 +8,6 @@ class Song
   end
 
     def artist_name=(name)
-      binding.pry
       if (self.artist.nil?)
         self.artist = Artist.new(name)
       else
@@ -59,9 +58,10 @@ class Song
   end
 
   def self.new_from_filename(file)
-    info = file.match(/(.*) - (.*)\.mp3/)
-    s = new_by_name(info[2])
-    s.artist_name = info[1]
+    info = filename.split(" - ")
+  #  info = file.match(/(.*) - (.*)\.mp3/)
+    s = new_by_name(info[1])
+    s.artist_name = info[2]
     #binding.pry
     s
   end
