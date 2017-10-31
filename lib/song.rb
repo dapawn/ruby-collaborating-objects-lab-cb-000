@@ -63,6 +63,7 @@ class Song
     s = self.new(info[1])
     s.artist_name = info[0]
     s.artist.save
+    s.artist.add_song(s)
     #binding.pry
     s
   end
