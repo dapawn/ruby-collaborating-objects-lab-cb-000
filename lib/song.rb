@@ -62,6 +62,7 @@ class Song
   #  info = file.match(/(.*) - (.*)\.mp3/)
     s = self.new(info[1])
     s.artist_name = info[0]
+    s.artist.save
     #binding.pry
     s
   end
