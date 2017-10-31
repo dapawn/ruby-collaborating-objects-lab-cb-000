@@ -16,7 +16,7 @@ class Artist
 
   def self.create_by_name(name)
       artist = self.new(name)
-      @@all << artist unless @@all.include?(artist)
+      @@all << artist 
       artist
   end
 
@@ -35,7 +35,7 @@ class Artist
   end
 
   def save
-    self.class.all << self
+    self.class.all << self unless self.class.all.include?(artist)
   end
 
   def songs
