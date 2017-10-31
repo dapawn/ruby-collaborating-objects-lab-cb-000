@@ -60,7 +60,6 @@ class Song
   def self.new_from_filename(file)
     info = file.split(" - ")
   #  info = file.match(/(.*) - (.*)\.mp3/)
-  binding.pry
     s = new_by_name(info[1])
     s.artist_name = info[0]
     #binding.pry
