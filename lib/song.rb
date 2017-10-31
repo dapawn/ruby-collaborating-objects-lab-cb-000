@@ -57,7 +57,7 @@ class Song
     @@all.sort {|a,b| a.name <=> b.name}
   end
 
-  def self.new_from_filename(file)
+  def self.new_by_filename(file)
     info = file.split(" - ")
   #  info = file.match(/(.*) - (.*)\.mp3/)
     s = self.new(info[1])
