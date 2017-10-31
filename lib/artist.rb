@@ -35,7 +35,7 @@ class Artist
   end
 
   def save
-    self.class.all << self unless self.class.all.include?(self)
+    self.class.all << self unless self.class.all.any?(|a| a.name == self.name)
   end
 
   def songs
